@@ -1,0 +1,43 @@
+# 7.4
+
+things = ["mozzarella", "cinderella", "salmonella"]
+print(things)
+
+# 7.5
+things[1] = things[1].title()
+print(things)
+
+#7.6
+things[0] = things[0].upper()
+print(things)
+
+#7.7
+index = things.index("salmonella")
+things[index] = "Noble Prize"
+print(things)
+
+#9.1
+
+def good():
+    return ["Henry", "Ron", "Hermione"]
+
+names = good()
+print(names)
+
+#9.2
+
+def get_odds():
+    for number in range(10):
+        if number % 2 != 0:  
+            yield number
+
+
+odd_gen = get_odds()
+third_value = None
+
+for index, value in enumerate(odd_gen):
+    if index == 2:  
+        third_value = value
+        break
+
+print(third_value)
